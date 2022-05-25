@@ -1,0 +1,1602 @@
+{
+  "contractName": "IMelandChainERC1155CID",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "signKeccak256",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RefundSwapin",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "signKeccak256",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "cid",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "SwapinWithCID",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "cid",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "SwapoutWithCID",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "cid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "callSwapoutWithCID",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct IMelandAccessRoles.MPCPermit",
+          "name": "signature",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "cid",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IMelandChainERC1155CID.SwapinParams",
+          "name": "swapinparams",
+          "type": "tuple"
+        }
+      ],
+      "name": "callSwapinWithCID",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"signKeccak256\",\"type\":\"bytes32\"}],\"name\":\"RefundSwapin\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"signKeccak256\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"cid\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SwapinWithCID\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"cid\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SwapoutWithCID\",\"type\":\"event\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"internalType\":\"struct IMelandAccessRoles.MPCPermit\",\"name\":\"signature\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"cid\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct IMelandChainERC1155CID.SwapinParams\",\"name\":\"swapinparams\",\"type\":\"tuple\"}],\"name\":\"callSwapinWithCID\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"cid\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"callSwapoutWithCID\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/nft/IMelandChainERC1155CID.sol\":\"IMelandChainERC1155CID\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol\":{\"keccak256\":\"0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://92ad7e572cf44e6b4b37631b44b62f9eb9fb1cf14d9ce51c1504d5dc7ccaf758\",\"dweb:/ipfs/QmcnbqX85tsWnUXPmtuPLE4SczME2sJaTfmqEFkuAJvWhy\"]},\"project:/contracts/common/IMelandAccessRoles.sol\":{\"keccak256\":\"0x662a4598ddecca5c567e57f864c8eae3def9459399a45d91c46d48f39d112518\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://73ed42c0e74a92bfeff8f75fab170cbbd9cc2879104a523588e51bd353c606dd\",\"dweb:/ipfs/QmVgcb61cF2hpEgNzuvTZER1q3Byp8j4giztSj8G4ob17x\"]},\"project:/contracts/nft/IMelandChainERC1155CID.sol\":{\"keccak256\":\"0x90c3d6bbf87840bf84722f7c405da71f1192f52db8bffabeec1e820dc13c4f8a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dd9b6beba4008c8e83e11cee0dd2222d6a597388a1bc2388e08a3e3609c921bc\",\"dweb:/ipfs/QmXeCkGvaZ9c9BMH6nTmrh5UodDRTCXHzBfReAxkiaBhCN\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\nimport \"@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol\";\nimport \"../common/IMelandAccessRoles.sol\";\n\n// Cross-chain NFT of Meland subchains.\n// Implemented to allow NFTs from the Meland subchain to circulate and be traded on the public chain.\n// Allowing a part of contracts, marketplace, AMM exchange to construct it based on user's signature and meland mpc's signature.\n// Then when the user buys it, it is charged to the Meland subchain\ninterface IMelandChainERC1155CID is IERC165Upgradeable, IMelandAccessRoles {\n    struct SwapinParams {\n        address to;\n        uint256 cid;\n        uint256 value;\n        bytes data;\n    }\n\n    // Converting NFT to Meland Private Chain.\n    event SwapoutWithCID(address indexed to, uint256 cid, uint256 value);\n\n    event SwapinWithCID(\n        bytes32 indexed signKeccak256,\n        address to,\n        uint256 cid,\n        uint256 value\n    );\n\n    // If something goes wrong in the mint process, an event is raised to have the subchain refunded\n    event RefundSwapin(\n        bytes32 indexed signKeccak256\n    );\n\n    function callSwapoutWithCID(\n        address to,\n        uint256 cid,\n        uint256 value\n    ) external;\n\n    function callSwapinWithCID(\n        MPCPermit memory signature,\n        SwapinParams memory swapinparams\n    ) external;\n}\n",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/nft/IMelandChainERC1155CID.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/nft/IMelandChainERC1155CID.sol",
+    "exportedSymbols": {
+      "IERC165Upgradeable": [
+        3626
+      ],
+      "IMelandAccessRoles": [
+        5670
+      ],
+      "IMelandChainERC1155CID": [
+        6921
+      ]
+    },
+    "id": 6922,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6865,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:47"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+        "id": 6866,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6922,
+        "sourceUnit": 3627,
+        "src": "56:88:47",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
+        "file": "../common/IMelandAccessRoles.sol",
+        "id": 6867,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6922,
+        "sourceUnit": 5671,
+        "src": "145:42:47",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6868,
+              "name": "IERC165Upgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3626,
+              "src": "564:18:47"
+            },
+            "id": 6869,
+            "nodeType": "InheritanceSpecifier",
+            "src": "564:18:47"
+          },
+          {
+            "baseName": {
+              "id": 6870,
+              "name": "IMelandAccessRoles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 5670,
+              "src": "584:18:47"
+            },
+            "id": 6871,
+            "nodeType": "InheritanceSpecifier",
+            "src": "584:18:47"
+          }
+        ],
+        "canonicalName": "IMelandChainERC1155CID",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6921,
+        "linearizedBaseContracts": [
+          6921,
+          5670,
+          3626
+        ],
+        "name": "IMelandChainERC1155CID",
+        "nameLocation": "538:22:47",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMelandChainERC1155CID.SwapinParams",
+            "id": 6880,
+            "members": [
+              {
+                "constant": false,
+                "id": 6873,
+                "mutability": "mutable",
+                "name": "to",
+                "nameLocation": "647:2:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "639:10:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6872,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "639:7:47",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6875,
+                "mutability": "mutable",
+                "name": "cid",
+                "nameLocation": "667:3:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "659:11:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6874,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "659:7:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6877,
+                "mutability": "mutable",
+                "name": "value",
+                "nameLocation": "688:5:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "680:13:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6876,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "680:7:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6879,
+                "mutability": "mutable",
+                "name": "data",
+                "nameLocation": "709:4:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "703:10:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6878,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "703:5:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SwapinParams",
+            "nameLocation": "616:12:47",
+            "nodeType": "StructDefinition",
+            "scope": 6921,
+            "src": "609:111:47",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 6888,
+            "name": "SwapoutWithCID",
+            "nameLocation": "779:14:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6882,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "810:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "794:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6881,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6884,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "822:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "814:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "814:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6886,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "835:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "827:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6885,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "793:48:47"
+            },
+            "src": "773:69:47"
+          },
+          {
+            "anonymous": false,
+            "id": 6898,
+            "name": "SwapinWithCID",
+            "nameLocation": "854:13:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6897,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6890,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "signKeccak256",
+                  "nameLocation": "893:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "877:29:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6889,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "877:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "924:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "916:10:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6894,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "944:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "936:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6893,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "936:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6896,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "965:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "957:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6895,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:109:47"
+            },
+            "src": "848:129:47"
+          },
+          {
+            "anonymous": false,
+            "id": 6902,
+            "name": "RefundSwapin",
+            "nameLocation": "1090:12:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6900,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "signKeccak256",
+                  "nameLocation": "1128:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6902,
+                  "src": "1112:29:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6899,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1112:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1102:45:47"
+            },
+            "src": "1084:64:47"
+          },
+          {
+            "functionSelector": "b07d8b72",
+            "id": 6911,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callSwapoutWithCID",
+            "nameLocation": "1163:18:47",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6904,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1199:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1191:10:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6903,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1191:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6906,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "1219:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1211:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6905,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1211:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6908,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "1240:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1232:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:70:47"
+            },
+            "returnParameters": {
+              "id": 6910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1260:0:47"
+            },
+            "scope": 6921,
+            "src": "1154:107:47",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "27b59cbd",
+            "id": 6920,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callSwapinWithCID",
+            "nameLocation": "1276:17:47",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6914,
+                  "mutability": "mutable",
+                  "name": "signature",
+                  "nameLocation": "1320:9:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6920,
+                  "src": "1303:26:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MPCPermit_$5669_memory_ptr",
+                    "typeString": "struct IMelandAccessRoles.MPCPermit"
+                  },
+                  "typeName": {
+                    "id": 6913,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6912,
+                      "name": "MPCPermit",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5669,
+                      "src": "1303:9:47"
+                    },
+                    "referencedDeclaration": 5669,
+                    "src": "1303:9:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MPCPermit_$5669_storage_ptr",
+                      "typeString": "struct IMelandAccessRoles.MPCPermit"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6917,
+                  "mutability": "mutable",
+                  "name": "swapinparams",
+                  "nameLocation": "1359:12:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6920,
+                  "src": "1339:32:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SwapinParams_$6880_memory_ptr",
+                    "typeString": "struct IMelandChainERC1155CID.SwapinParams"
+                  },
+                  "typeName": {
+                    "id": 6916,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6915,
+                      "name": "SwapinParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 6880,
+                      "src": "1339:12:47"
+                    },
+                    "referencedDeclaration": 6880,
+                    "src": "1339:12:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SwapinParams_$6880_storage_ptr",
+                      "typeString": "struct IMelandChainERC1155CID.SwapinParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1293:84:47"
+            },
+            "returnParameters": {
+              "id": 6919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1386:0:47"
+            },
+            "scope": 6921,
+            "src": "1267:120:47",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6922,
+        "src": "528:861:47",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1358:47"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/nft/IMelandChainERC1155CID.sol",
+    "exportedSymbols": {
+      "IERC165Upgradeable": [
+        3626
+      ],
+      "IMelandAccessRoles": [
+        5670
+      ],
+      "IMelandChainERC1155CID": [
+        6921
+      ]
+    },
+    "id": 6922,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6865,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:47"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+        "id": 6866,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6922,
+        "sourceUnit": 3627,
+        "src": "56:88:47",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
+        "file": "../common/IMelandAccessRoles.sol",
+        "id": 6867,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6922,
+        "sourceUnit": 5671,
+        "src": "145:42:47",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6868,
+              "name": "IERC165Upgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3626,
+              "src": "564:18:47"
+            },
+            "id": 6869,
+            "nodeType": "InheritanceSpecifier",
+            "src": "564:18:47"
+          },
+          {
+            "baseName": {
+              "id": 6870,
+              "name": "IMelandAccessRoles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 5670,
+              "src": "584:18:47"
+            },
+            "id": 6871,
+            "nodeType": "InheritanceSpecifier",
+            "src": "584:18:47"
+          }
+        ],
+        "canonicalName": "IMelandChainERC1155CID",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6921,
+        "linearizedBaseContracts": [
+          6921,
+          5670,
+          3626
+        ],
+        "name": "IMelandChainERC1155CID",
+        "nameLocation": "538:22:47",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMelandChainERC1155CID.SwapinParams",
+            "id": 6880,
+            "members": [
+              {
+                "constant": false,
+                "id": 6873,
+                "mutability": "mutable",
+                "name": "to",
+                "nameLocation": "647:2:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "639:10:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6872,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "639:7:47",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6875,
+                "mutability": "mutable",
+                "name": "cid",
+                "nameLocation": "667:3:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "659:11:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6874,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "659:7:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6877,
+                "mutability": "mutable",
+                "name": "value",
+                "nameLocation": "688:5:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "680:13:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6876,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "680:7:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6879,
+                "mutability": "mutable",
+                "name": "data",
+                "nameLocation": "709:4:47",
+                "nodeType": "VariableDeclaration",
+                "scope": 6880,
+                "src": "703:10:47",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6878,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "703:5:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SwapinParams",
+            "nameLocation": "616:12:47",
+            "nodeType": "StructDefinition",
+            "scope": 6921,
+            "src": "609:111:47",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 6888,
+            "name": "SwapoutWithCID",
+            "nameLocation": "779:14:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6882,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "810:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "794:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6881,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6884,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "822:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "814:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "814:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6886,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "835:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6888,
+                  "src": "827:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6885,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "793:48:47"
+            },
+            "src": "773:69:47"
+          },
+          {
+            "anonymous": false,
+            "id": 6898,
+            "name": "SwapinWithCID",
+            "nameLocation": "854:13:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6897,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6890,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "signKeccak256",
+                  "nameLocation": "893:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "877:29:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6889,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "877:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "924:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "916:10:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "916:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6894,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "944:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "936:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6893,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "936:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6896,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "965:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6898,
+                  "src": "957:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6895,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:109:47"
+            },
+            "src": "848:129:47"
+          },
+          {
+            "anonymous": false,
+            "id": 6902,
+            "name": "RefundSwapin",
+            "nameLocation": "1090:12:47",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6900,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "signKeccak256",
+                  "nameLocation": "1128:13:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6902,
+                  "src": "1112:29:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6899,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1112:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1102:45:47"
+            },
+            "src": "1084:64:47"
+          },
+          {
+            "functionSelector": "b07d8b72",
+            "id": 6911,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callSwapoutWithCID",
+            "nameLocation": "1163:18:47",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6904,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1199:2:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1191:10:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6903,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1191:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6906,
+                  "mutability": "mutable",
+                  "name": "cid",
+                  "nameLocation": "1219:3:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1211:11:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6905,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1211:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6908,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "1240:5:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6911,
+                  "src": "1232:13:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:7:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:70:47"
+            },
+            "returnParameters": {
+              "id": 6910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1260:0:47"
+            },
+            "scope": 6921,
+            "src": "1154:107:47",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "27b59cbd",
+            "id": 6920,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callSwapinWithCID",
+            "nameLocation": "1276:17:47",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6914,
+                  "mutability": "mutable",
+                  "name": "signature",
+                  "nameLocation": "1320:9:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6920,
+                  "src": "1303:26:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MPCPermit_$5669_memory_ptr",
+                    "typeString": "struct IMelandAccessRoles.MPCPermit"
+                  },
+                  "typeName": {
+                    "id": 6913,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6912,
+                      "name": "MPCPermit",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5669,
+                      "src": "1303:9:47"
+                    },
+                    "referencedDeclaration": 5669,
+                    "src": "1303:9:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MPCPermit_$5669_storage_ptr",
+                      "typeString": "struct IMelandAccessRoles.MPCPermit"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6917,
+                  "mutability": "mutable",
+                  "name": "swapinparams",
+                  "nameLocation": "1359:12:47",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6920,
+                  "src": "1339:32:47",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SwapinParams_$6880_memory_ptr",
+                    "typeString": "struct IMelandChainERC1155CID.SwapinParams"
+                  },
+                  "typeName": {
+                    "id": 6916,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 6915,
+                      "name": "SwapinParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 6880,
+                      "src": "1339:12:47"
+                    },
+                    "referencedDeclaration": 6880,
+                    "src": "1339:12:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SwapinParams_$6880_storage_ptr",
+                      "typeString": "struct IMelandChainERC1155CID.SwapinParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1293:84:47"
+            },
+            "returnParameters": {
+              "id": 6919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1386:0:47"
+            },
+            "scope": 6921,
+            "src": "1267:120:47",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6922,
+        "src": "528:861:47",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1358:47"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.342Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

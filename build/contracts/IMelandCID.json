@@ -1,0 +1,305 @@
+{
+  "contractName": "IMelandCID",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCidByTokenId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getCidByTokenId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/nft/IMelandCID.sol\":\"IMelandCID\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/nft/IMelandCID.sol\":{\"keccak256\":\"0x6112fc55f027aed3aee9b4312f505bcaca95005bd3ebc3d201ec912780d052fc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d06b6d11ea74e878fa530a800ab64bce9dbe13ba0ace15b65d25a42b130cff88\",\"dweb:/ipfs/QmWDCx7EJG1p1o3aaDoPpowhFAD6NiG1PQD7h2dJy84DAt\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ninterface IMelandCID {\n    function getCidByTokenId(uint256 tokenId) external view returns (uint256);\n}",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/nft/IMelandCID.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/nft/IMelandCID.sol",
+    "exportedSymbols": {
+      "IMelandCID": [
+        6803
+      ]
+    },
+    "id": 6804,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6795,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:45"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandCID",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6803,
+        "linearizedBaseContracts": [
+          6803
+        ],
+        "name": "IMelandCID",
+        "nameLocation": "66:10:45",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3ef780bc",
+            "id": 6802,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCidByTokenId",
+            "nameLocation": "92:15:45",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6798,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6797,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "116:7:45",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6802,
+                  "src": "108:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6796,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:7:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "107:17:45"
+            },
+            "returnParameters": {
+              "id": 6801,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6800,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6802,
+                  "src": "148:7:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6799,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "148:7:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:9:45"
+            },
+            "scope": 6803,
+            "src": "83:74:45",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6804,
+        "src": "56:103:45",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:127:45"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/nft/IMelandCID.sol",
+    "exportedSymbols": {
+      "IMelandCID": [
+        6803
+      ]
+    },
+    "id": 6804,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6795,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:45"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandCID",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6803,
+        "linearizedBaseContracts": [
+          6803
+        ],
+        "name": "IMelandCID",
+        "nameLocation": "66:10:45",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3ef780bc",
+            "id": 6802,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCidByTokenId",
+            "nameLocation": "92:15:45",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6798,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6797,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "116:7:45",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6802,
+                  "src": "108:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6796,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:7:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "107:17:45"
+            },
+            "returnParameters": {
+              "id": 6801,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6800,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6802,
+                  "src": "148:7:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6799,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "148:7:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:9:45"
+            },
+            "scope": 6803,
+            "src": "83:74:45",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6804,
+        "src": "56:103:45",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:127:45"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.341Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

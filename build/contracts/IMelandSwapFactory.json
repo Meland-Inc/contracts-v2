@@ -1,0 +1,345 @@
+{
+  "contractName": "IMelandSwapFactory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "productId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        }
+      ],
+      "name": "CreatePool",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"productId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"category\",\"type\":\"string\"}],\"name\":\"CreatePool\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/swap/IMelandSwapFactory.sol\":\"IMelandSwapFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/swap/IMelandSwapFactory.sol\":{\"keccak256\":\"0x838b1b44fc2d1d92bcfc59141eb1de499ef593ec11402816dfe231a8894d78f2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3d178a00b0cb152ecace4eb474c8811cdb448bb48987ad5f00cb26e6738abdc2\",\"dweb:/ipfs/QmfHxocqTjXRtLNQ3SWJMZKUxsQZxKAmcB44D24CAVvN8p\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ninterface IMelandSwapFactory {\n    event CreatePool(\n        address indexed pool,\n        bytes32 productId,\n        string category\n    );\n}",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/swap/IMelandSwapFactory.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/swap/IMelandSwapFactory.sol",
+    "exportedSymbols": {
+      "IMelandSwapFactory": [
+        7846
+      ]
+    },
+    "id": 7847,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7837,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:54"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandSwapFactory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 7846,
+        "linearizedBaseContracts": [
+          7846
+        ],
+        "name": "IMelandSwapFactory",
+        "nameLocation": "66:18:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 7845,
+            "name": "CreatePool",
+            "nameLocation": "97:10:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 7844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7839,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nameLocation": "133:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "117:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7838,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "117:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7841,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "productId",
+                  "nameLocation": "155:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "147:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7840,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7843,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "category",
+                  "nameLocation": "181:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "174:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "107:88:54"
+            },
+            "src": "91:105:54"
+          }
+        ],
+        "scope": 7847,
+        "src": "56:142:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:166:54"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/swap/IMelandSwapFactory.sol",
+    "exportedSymbols": {
+      "IMelandSwapFactory": [
+        7846
+      ]
+    },
+    "id": 7847,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7837,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:54"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandSwapFactory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 7846,
+        "linearizedBaseContracts": [
+          7846
+        ],
+        "name": "IMelandSwapFactory",
+        "nameLocation": "66:18:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 7845,
+            "name": "CreatePool",
+            "nameLocation": "97:10:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 7844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7839,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nameLocation": "133:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "117:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7838,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "117:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7841,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "productId",
+                  "nameLocation": "155:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "147:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7840,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7843,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "category",
+                  "nameLocation": "181:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7845,
+                  "src": "174:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:6:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "107:88:54"
+            },
+            "src": "91:105:54"
+          }
+        ],
+        "scope": 7847,
+        "src": "56:142:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:166:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.380Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "contractName": "IMelandSwapExchangePool",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "provider",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "erc1155Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "erc20amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LiquidityAdded",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"provider\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"erc1155Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"erc20amount\",\"type\":\"uint256\"}],\"name\":\"LiquidityAdded\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/swap/IMelandSwapExchangePool.sol\":\"IMelandSwapExchangePool\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/swap/IMelandSwapExchangePool.sol\":{\"keccak256\":\"0x7b33eb48b350e477b44f7057e2717eb8090cea854f112ac133d1514643271c17\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c4b0f04381e02036d681fbb3469041847239952dba2e978e323b9821dac672d\",\"dweb:/ipfs/QmUiwYdCJ25Z2DVd5SHSKx4x8o7b6uxCqQJtYvgSwaawPr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ninterface IMelandSwapExchangePool {\n    event LiquidityAdded(\n        address indexed provider,\n        uint256 erc1155Amount,\n        uint256 erc20amount\n    );\n}\n",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/swap/IMelandSwapExchangePool.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/swap/IMelandSwapExchangePool.sol",
+    "exportedSymbols": {
+      "IMelandSwapExchangePool": [
+        7835
+      ]
+    },
+    "id": 7836,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7826,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:53"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandSwapExchangePool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 7835,
+        "linearizedBaseContracts": [
+          7835
+        ],
+        "name": "IMelandSwapExchangePool",
+        "nameLocation": "66:23:53",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 7834,
+            "name": "LiquidityAdded",
+            "nameLocation": "102:14:53",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 7833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7828,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "provider",
+                  "nameLocation": "142:8:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "126:24:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7827,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:7:53",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7830,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "erc1155Amount",
+                  "nameLocation": "168:13:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "160:21:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7829,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "160:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7832,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "erc20amount",
+                  "nameLocation": "199:11:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "191:19:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7831,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "116:100:53"
+            },
+            "src": "96:121:53"
+          }
+        ],
+        "scope": 7836,
+        "src": "56:163:53",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:188:53"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/swap/IMelandSwapExchangePool.sol",
+    "exportedSymbols": {
+      "IMelandSwapExchangePool": [
+        7835
+      ]
+    },
+    "id": 7836,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7826,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:53"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandSwapExchangePool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 7835,
+        "linearizedBaseContracts": [
+          7835
+        ],
+        "name": "IMelandSwapExchangePool",
+        "nameLocation": "66:23:53",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 7834,
+            "name": "LiquidityAdded",
+            "nameLocation": "102:14:53",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 7833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7828,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "provider",
+                  "nameLocation": "142:8:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "126:24:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7827,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:7:53",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7830,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "erc1155Amount",
+                  "nameLocation": "168:13:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "160:21:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7829,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "160:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7832,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "erc20amount",
+                  "nameLocation": "199:11:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7834,
+                  "src": "191:19:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7831,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "116:100:53"
+            },
+            "src": "96:121:53"
+          }
+        ],
+        "scope": 7836,
+        "src": "56:163:53",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:188:53"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.379Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

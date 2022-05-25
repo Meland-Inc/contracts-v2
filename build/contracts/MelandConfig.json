@@ -1,0 +1,117 @@
+{
+  "contractName": "MelandConfig",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/common/MelandConfig.sol\":\"MelandConfig\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/common/MelandConfig.sol\":{\"keccak256\":\"0x38b2a9ef20d7ac79a4e78172bf6e235c3299803e8fe06400528f009f99ce7e0c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33f9e11d3821b40e1599add38cb304b8df7992fc5cfa71d3e8335869e263ad84\",\"dweb:/ipfs/Qme1kL5mjW27rcbQYNnCB7cLUQPw5f3ve4jWCVZp9pgVZA\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212206b10949234a0e99d3ce25cdf0dd8e73797fe5f06240a6cf99e6e73e187a855d264736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212206b10949234a0e99d3ce25cdf0dd8e73797fe5f06240a6cf99e6e73e187a855d264736f6c63430008090033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "56:30:41:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "56:30:41:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ncontract MelandConfig {\n    \n}",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/common/MelandConfig.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/common/MelandConfig.sol",
+    "exportedSymbols": {
+      "MelandConfig": [
+        5888
+      ]
+    },
+    "id": 5889,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5887,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MelandConfig",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 5888,
+        "linearizedBaseContracts": [
+          5888
+        ],
+        "name": "MelandConfig",
+        "nameLocation": "65:12:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 5889,
+        "src": "56:30:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:54:41"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/common/MelandConfig.sol",
+    "exportedSymbols": {
+      "MelandConfig": [
+        5888
+      ]
+    },
+    "id": 5889,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5887,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MelandConfig",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 5888,
+        "linearizedBaseContracts": [
+          5888
+        ],
+        "name": "MelandConfig",
+        "nameLocation": "65:12:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 5889,
+        "src": "56:30:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:54:41"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.328Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

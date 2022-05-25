@@ -1,0 +1,305 @@
+{
+  "contractName": "IMelandAccessRoles",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/common/IMelandAccessRoles.sol\":\"IMelandAccessRoles\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/common/IMelandAccessRoles.sol\":{\"keccak256\":\"0x662a4598ddecca5c567e57f864c8eae3def9459399a45d91c46d48f39d112518\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://73ed42c0e74a92bfeff8f75fab170cbbd9cc2879104a523588e51bd353c606dd\",\"dweb:/ipfs/QmVgcb61cF2hpEgNzuvTZER1q3Byp8j4giztSj8G4ob17x\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ninterface IMelandAccessRoles {\n    struct MPCPermit {\n        uint8 v;\n        bytes32 r;\n        bytes32 s;\n    }\n}\n",
+  "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/common/IMelandAccessRoles.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
+    "exportedSymbols": {
+      "IMelandAccessRoles": [
+        5670
+      ]
+    },
+    "id": 5671,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5662,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandAccessRoles",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 5670,
+        "linearizedBaseContracts": [
+          5670
+        ],
+        "name": "IMelandAccessRoles",
+        "nameLocation": "66:18:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMelandAccessRoles.MPCPermit",
+            "id": 5669,
+            "members": [
+              {
+                "constant": false,
+                "id": 5664,
+                "mutability": "mutable",
+                "name": "v",
+                "nameLocation": "124:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "118:7:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 5663,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5666,
+                "mutability": "mutable",
+                "name": "r",
+                "nameLocation": "143:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "135:9:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5665,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "135:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5668,
+                "mutability": "mutable",
+                "name": "s",
+                "nameLocation": "162:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "154:9:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5667,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "154:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MPCPermit",
+            "nameLocation": "98:9:38",
+            "nodeType": "StructDefinition",
+            "scope": 5670,
+            "src": "91:79:38",
+            "visibility": "public"
+          }
+        ],
+        "scope": 5671,
+        "src": "56:116:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:141:38"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
+    "exportedSymbols": {
+      "IMelandAccessRoles": [
+        5670
+      ]
+    },
+    "id": 5671,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5662,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMelandAccessRoles",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 5670,
+        "linearizedBaseContracts": [
+          5670
+        ],
+        "name": "IMelandAccessRoles",
+        "nameLocation": "66:18:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMelandAccessRoles.MPCPermit",
+            "id": 5669,
+            "members": [
+              {
+                "constant": false,
+                "id": 5664,
+                "mutability": "mutable",
+                "name": "v",
+                "nameLocation": "124:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "118:7:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 5663,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5666,
+                "mutability": "mutable",
+                "name": "r",
+                "nameLocation": "143:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "135:9:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5665,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "135:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5668,
+                "mutability": "mutable",
+                "name": "s",
+                "nameLocation": "162:1:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 5669,
+                "src": "154:9:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5667,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "154:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MPCPermit",
+            "nameLocation": "98:9:38",
+            "nodeType": "StructDefinition",
+            "scope": 5670,
+            "src": "91:79:38",
+            "visibility": "public"
+          }
+        ],
+        "scope": 5671,
+        "src": "56:116:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:141:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-05-25T07:00:07.325Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
