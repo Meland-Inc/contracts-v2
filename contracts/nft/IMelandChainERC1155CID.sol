@@ -10,9 +10,11 @@ import "../common/IMelandAccessRoles.sol";
 // Then when the user buys it, it is charged to the Meland subchain
 interface IMelandChainERC1155CID is IERC165Upgradeable, IMelandAccessRoles {
     struct SwapinParams {
+        address from;
         address to;
         uint256 cid;
         uint256 value;
+        uint256 nonce;
         bytes data;
     }
 
@@ -38,7 +40,7 @@ interface IMelandChainERC1155CID is IERC165Upgradeable, IMelandAccessRoles {
     ) external;
 
     function callSwapinWithCID(
-        MPCPermit memory signature,
+        bytes calldata signature,
         SwapinParams memory swapinparams
     ) external;
 }

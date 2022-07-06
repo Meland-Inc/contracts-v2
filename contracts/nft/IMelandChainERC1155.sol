@@ -10,10 +10,12 @@ import "../common/IMelandAccessRoles.sol";
 // Then when the user buys it, it is charged to the Meland subchain
 interface IMelandChainERC1155 is IERC165Upgradeable, IMelandAccessRoles {
     struct SwapinParams {
+        address from;
         address to;
         uint256 tokenId;
         uint256 cid;
         uint256 value;
+        uint256 nonce;
         bytes data;
     }
 
@@ -34,7 +36,8 @@ interface IMelandChainERC1155 is IERC165Upgradeable, IMelandAccessRoles {
 
     // If something goes wrong in the mint process, an event is raised to have the subchain refunded
     event RefundSwapin(
-        bytes32 indexed signKeccak256
+        bytes32 indexed signKeccak256,
+        bytes returndata
     );
 
     function callSwapoutWithTokenId(
@@ -44,7 +47,7 @@ interface IMelandChainERC1155 is IERC165Upgradeable, IMelandAccessRoles {
     ) external;
 
     function callSwapinWithTokenId(
-        MPCPermit memory signature,
+        bytes calldata signature,
         SwapinParams memory swapinparams
     ) external;
 }

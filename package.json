@@ -10,7 +10,8 @@
     "@ethersproject/units": "^5.4.0",
     "@openzeppelin/contracts": "^4.5.0",
     "@openzeppelin/contracts-upgradeable": "^4.5.0",
-    "@truffle/hdwallet-provider": "^1.5.0",
+    "@truffle/hdwallet-provider": "^2.0",
+    "@typechain/web3-v1": "^6.0.0",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/network-connector": "^6.1.9",
@@ -24,12 +25,16 @@
     "react-dom": "^17.0.2",
     "rlp": "^3.0.0",
     "truffle-flattener": "^1.5.0",
+    "web3": "^1.7.3",
     "yarn": "^1.22.11"
   },
   "scripts": {
     "test": "export $(cat .test_env | xargs) && truffle test --compile-all",
-    "codegen": "typechain --target=ethers-v5 --out-dir=$OUT 'build/contracts/*.json'",
+    "codegen": "typechain --target=web3-v1 --out-dir=$OUT 'build/contracts/*.json'",
+    "codegenx": "typechain --target=web3-v1 --out-dir=/Users/alberthuang/code/services/packages/meland-service/src/contractsv2 'build/contracts/*.json'",
+    "codegenw": "typechain --target=web3-v1 --out-dir=/Users/alberthuang/code/web-marketplace/src/contractsv2 'build/contracts/*.json'",
     "confgen": "export $(cat .env | xargs) && truffle exec ./update_constant.js",
+    "init": "export $(cat .env | xargs) && truffle exec ./init.js",
     "dev": "export $(cat .env | xargs) && truffle develop",
     "build": "export $(cat .env | xargs) && truffle compile",
     "deploy": "export $(cat .env | xargs) && truffle migrate",
@@ -68,10 +73,10 @@
     "craco-esbuild": "^0.3.4",
     "eslint-plugin-truffle": "^0.3.1",
     "react-scripts": "4.0.3",
-    "truffle": "^5.4.9",
+    "truffle": "^5.5.20",
     "truffle-plugin-stdjsonin": "https://github.com/mhrsalehi/truffle-plugin-stdjsonin/",
     "truffle-plugin-verify": "^0.5.15",
-    "typechain": "^5.1.2",
+    "typechain": "^8.0.0",
     "typescript": "^4.4.2"
   }
 }

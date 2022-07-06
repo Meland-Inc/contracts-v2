@@ -30,10 +30,21 @@ module.exports = {
 
     // polygon test network
     mumbai: {
-      provider: () => new HDWalletProvider(mnemonic, `http://bor-rpc-fast-mumbai.melandworld.com`),
+      provider: () => new HDWalletProvider({
+        provider: "https://matic-mumbai.chainstacklabs.com",
+        mnemonic: mnemonic,
+        networkCheckTimeout: 10000000,
+        pollingInterval: 3000,
+      }),
       network_id: 80001,
       confirmations: 0,
+      // gasPrice: 80000000000,
+      // maxFeePerGas: 80000000000,
+      // networkCheckTimeout: 200,
+      // maxPriorityFeePerGas: 80000000000,
+      networkCheckTimeout: 10000000,
       timeoutBlocks: 200,
+      deploymentPollingInterval: 1000,
       skipDryRun: true
     },
 
@@ -108,7 +119,7 @@ module.exports = {
     }
   },
 
-  plugins: [ 
+  plugins: [
     'truffle-plugin-verify',
     'truffle-plugin-stdjsonin'
   ],

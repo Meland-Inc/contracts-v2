@@ -7,30 +7,30 @@
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
-  "sourceMap": "56:30:41:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "56:30:41:-:0;;;;;",
+  "sourceMap": "56:30:47:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "56:30:47:-:0;;;;;",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ncontract MelandConfig {\n    \n}",
   "sourcePath": "/Users/alberthuang/code/contracts-v2/contracts/common/MelandConfig.sol",
   "ast": {
     "absolutePath": "project:/contracts/common/MelandConfig.sol",
     "exportedSymbols": {
       "MelandConfig": [
-        5888
+        5523
       ]
     },
-    "id": 5889,
+    "id": 5524,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5887,
+        "id": 5522,
         "literals": [
           "solidity",
           "0.8",
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:22:41"
+        "src": "32:22:47"
       },
       {
         "abstract": false,
@@ -39,41 +39,41 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 5888,
+        "id": 5523,
         "linearizedBaseContracts": [
-          5888
+          5523
         ],
         "name": "MelandConfig",
-        "nameLocation": "65:12:41",
+        "nameLocation": "65:12:47",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 5889,
-        "src": "56:30:41",
+        "scope": 5524,
+        "src": "56:30:47",
         "usedErrors": []
       }
     ],
-    "src": "32:54:41"
+    "src": "32:54:47"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/common/MelandConfig.sol",
     "exportedSymbols": {
       "MelandConfig": [
-        5888
+        5523
       ]
     },
-    "id": 5889,
+    "id": 5524,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5887,
+        "id": 5522,
         "literals": [
           "solidity",
           "0.8",
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:22:41"
+        "src": "32:22:47"
       },
       {
         "abstract": false,
@@ -82,20 +82,20 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 5888,
+        "id": 5523,
         "linearizedBaseContracts": [
-          5888
+          5523
         ],
         "name": "MelandConfig",
-        "nameLocation": "65:12:41",
+        "nameLocation": "65:12:47",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 5889,
-        "src": "56:30:41",
+        "scope": 5524,
+        "src": "56:30:47",
         "usedErrors": []
       }
     ],
-    "src": "32:54:41"
+    "src": "32:54:47"
   },
   "compiler": {
     "name": "solc",
@@ -103,7 +103,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-05-25T07:00:07.328Z",
+  "updatedAt": "2022-07-01T06:31:00.100Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
