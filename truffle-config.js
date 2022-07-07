@@ -1,5 +1,5 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-
+const Web3 = require("web3");
 const fs = require('fs');
 
 /// token owner的私钥.
@@ -7,6 +7,11 @@ const fs = require('fs');
 /// https://docs.matic.network/docs/develop/truffle#truffle-config.
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const mumbaiProvider = new Web3.providers.HttpProvider("https://nd-423-043-412.p2pify.com/4827e847837107fdd7166679b047c668", {
+  timeout: 100000
+});
+Web3.providers.WebsocketProvider.prototype.sendAsync = Web3.providers.WebsocketProvider.prototype.send;
+Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
 module.exports = {
 
   networks: {
@@ -28,10 +33,11 @@ module.exports = {
       skipDryRun: true
     },
 
+    
     // polygon test network
     mumbai: {
       provider: () => new HDWalletProvider({
-        provider: "https://matic-mumbai.chainstacklabs.com",
+        provider: mumbaiProvider,
         mnemonic: mnemonic,
         networkCheckTimeout: 10000000,
         pollingInterval: 3000,
