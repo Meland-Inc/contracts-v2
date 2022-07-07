@@ -7,11 +7,6 @@ const fs = require('fs');
 /// https://docs.matic.network/docs/develop/truffle#truffle-config.
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-const mumbaiProvider = new Web3.providers.HttpProvider("https://nd-423-043-412.p2pify.com/4827e847837107fdd7166679b047c668", {
-  timeout: 100000
-});
-Web3.providers.WebsocketProvider.prototype.sendAsync = Web3.providers.WebsocketProvider.prototype.send;
-Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
 module.exports = {
 
   networks: {
@@ -37,10 +32,10 @@ module.exports = {
     // polygon test network
     mumbai: {
       provider: () => new HDWalletProvider({
-        provider: mumbaiProvider,
+        provider: "https://nd-423-043-412.p2pify.com/4827e847837107fdd7166679b047c668",
         mnemonic: mnemonic,
         networkCheckTimeout: 10000000,
-        pollingInterval: 3000,
+        pollingInterval: 5000,
       }),
       network_id: 80001,
       confirmations: 0,
