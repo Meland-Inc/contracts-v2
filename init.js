@@ -27,7 +27,18 @@ module.exports = async function (callback) {
         const melandchain1155i = await MelandChainERC1155.at(MelandProxyAddress);
         const result = await melandchain1155i.isHolder(MelandMarketplaceProxyAddress)
         console.debug(result, "isHolder", MelandProxyAddress, MelandMarketplaceProxyAddress);
-        await melandchain1155i.addHolder(MelandMarketplaceProxyAddress);
+
+        while(true) {
+            const count = await web3.eth.getTransactionCount("0xb3F9D1614E806e9C47C93f13B838124eC05bFFD0");
+            console.debug(count, 'count', "0xb3F9D1614E806e9C47C93f13B838124eC05bFFD0");
+        
+            await melandchain1155i.addHolder(MelandMarketplaceProxyAddress, {
+                nonce: count,
+                // maxFeePerGas: 800000000000,
+                // maxPriorityFeePerGas: 800000000000,
+                gasPrice: 1100000000000,
+            });
+        }
 
         callback();
     } catch (error) {

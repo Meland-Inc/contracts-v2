@@ -386,11 +386,13 @@ contract Marketplace is
             params.poolBuyPrice,
             params.poolBuyPrice
         );
+        
         params.poolBuyPrice = factory.getBuyPrice(
             productId,
             IERC20Metadata(erc20token),
             params.poolBuyAmount
         );
+        
         if (orderIds.length == 0) {
             if (params.poolBuyAmount < neededAmount) {
                 ret.poolBuyAmount = 0;
@@ -404,7 +406,7 @@ contract Marketplace is
             return ret;
         }
 
-        while (neededAmount > 0) {
+        while (neededAmount > 0 && orderIds.length > 0) {
             Order memory order = orderById[orderIds[0]];
             uint256 matchOrderIndex = 0;
 
@@ -436,13 +438,16 @@ contract Marketplace is
             }
 
             uint256 amount = _min(neededAmount, order.amount);
-            neededAmount -= amount;
 
-            if (params.poolBuyAmount >= amount) {
-                params.poolBuyAmount -= amount;
-            } else {
-                params.poolBuyAmount = 0;
+            if (neededAmount == params.poolBuyAmount) {
+                if (params.poolBuyAmount >= amount) {
+                    params.poolBuyAmount -= amount;
+                } else {
+                    params.poolBuyAmount = 0;
+                }
             }
+
+            neededAmount -= amount;
             
             params.totalPrice =
                 params.totalPrice +

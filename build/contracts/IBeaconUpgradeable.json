@@ -29,15 +29,15 @@
     "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol",
     "exportedSymbols": {
       "IBeaconUpgradeable": [
-        1076
+        1208
       ]
     },
-    "id": 1077,
+    "id": 1209,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1068,
+        "id": 1200,
         "literals": [
           "solidity",
           "^",
@@ -45,7 +45,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "93:23:6"
+        "src": "93:23:7"
       },
       {
         "abstract": false,
@@ -54,54 +54,54 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 1069,
+          "id": 1201,
           "nodeType": "StructuredDocumentation",
-          "src": "118:79:6",
+          "src": "118:79:7",
           "text": " @dev This is the interface that {BeaconProxy} expects of its beacon."
         },
         "fullyImplemented": false,
-        "id": 1076,
+        "id": 1208,
         "linearizedBaseContracts": [
-          1076
+          1208
         ],
         "name": "IBeaconUpgradeable",
-        "nameLocation": "208:18:6",
+        "nameLocation": "208:18:7",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 1070,
+              "id": 1202,
               "nodeType": "StructuredDocumentation",
-              "src": "233:162:6",
+              "src": "233:162:7",
               "text": " @dev Must return an address that can be used as a delegate call target.\n {BeaconProxy} will check that this address is a contract."
             },
             "functionSelector": "5c60da1b",
-            "id": 1075,
+            "id": 1207,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "implementation",
-            "nameLocation": "409:14:6",
+            "nameLocation": "409:14:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1071,
+              "id": 1203,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "423:2:6"
+              "src": "423:2:7"
             },
             "returnParameters": {
-              "id": 1074,
+              "id": 1206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1073,
+                  "id": 1205,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1075,
-                  "src": "449:7:6",
+                  "scope": 1207,
+                  "src": "449:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -109,10 +109,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1072,
+                    "id": 1204,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "449:7:6",
+                    "src": "449:7:7",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -122,142 +122,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "448:9:6"
+              "src": "448:9:7"
             },
-            "scope": 1076,
-            "src": "400:58:6",
+            "scope": 1208,
+            "src": "400:58:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1077,
-        "src": "198:262:6",
+        "scope": 1209,
+        "src": "198:262:7",
         "usedErrors": []
       }
     ],
-    "src": "93:368:6"
-  },
-  "legacyAST": {
-    "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol",
-    "exportedSymbols": {
-      "IBeaconUpgradeable": [
-        1076
-      ]
-    },
-    "id": 1077,
-    "license": "MIT",
-    "nodeType": "SourceUnit",
-    "nodes": [
-      {
-        "id": 1068,
-        "literals": [
-          "solidity",
-          "^",
-          "0.8",
-          ".0"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "93:23:6"
-      },
-      {
-        "abstract": false,
-        "baseContracts": [],
-        "canonicalName": "IBeaconUpgradeable",
-        "contractDependencies": [],
-        "contractKind": "interface",
-        "documentation": {
-          "id": 1069,
-          "nodeType": "StructuredDocumentation",
-          "src": "118:79:6",
-          "text": " @dev This is the interface that {BeaconProxy} expects of its beacon."
-        },
-        "fullyImplemented": false,
-        "id": 1076,
-        "linearizedBaseContracts": [
-          1076
-        ],
-        "name": "IBeaconUpgradeable",
-        "nameLocation": "208:18:6",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "documentation": {
-              "id": 1070,
-              "nodeType": "StructuredDocumentation",
-              "src": "233:162:6",
-              "text": " @dev Must return an address that can be used as a delegate call target.\n {BeaconProxy} will check that this address is a contract."
-            },
-            "functionSelector": "5c60da1b",
-            "id": 1075,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "implementation",
-            "nameLocation": "409:14:6",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 1071,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "423:2:6"
-            },
-            "returnParameters": {
-              "id": 1074,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 1073,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 1075,
-                  "src": "449:7:6",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 1072,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "449:7:6",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "448:9:6"
-            },
-            "scope": 1076,
-            "src": "400:58:6",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "external"
-          }
-        ],
-        "scope": 1077,
-        "src": "198:262:6",
-        "usedErrors": []
-      }
-    ],
-    "src": "93:368:6"
+    "src": "93:368:7"
   },
   "compiler": {
     "name": "solc",
     "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.5",
-  "updatedAt": "2022-07-01T06:31:00.029Z",
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-13T06:01:47.563Z",
   "devdoc": {
     "details": "This is the interface that {BeaconProxy} expects of its beacon.",
     "kind": "dev",

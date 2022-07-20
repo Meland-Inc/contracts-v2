@@ -105,6 +105,7 @@ contract MelandSwapExchangePool20T1155 is
     }
 
     function _burnERC1155LP(address from, uint256 amount) internal {
+        require(erc1155LPByProvider[from] >= amount, "MelandSwapExchangePool20T1155#_burnERC1155LP: Permission error");
         erc1155LPTotal = erc1155LPTotal - amount;
         erc1155LPByProvider[from] = erc1155LPByProvider[from] - amount;
     }
@@ -372,7 +373,7 @@ contract MelandSwapExchangePool20T1155 is
         uint256 price = numerator / denominator;
 
         erc20Fees = (price * ownerCutPerMillion) / 2000000;
-        fromUserPrice = price - erc20Fees;
+        fromUserPrice = price + erc20Fees;
     }
 
     function getWithdrawERC20(address account)
@@ -415,8 +416,6 @@ contract MelandSwapExchangePool20T1155 is
         );
 
         erc20token.transfer(account, withdrawAmount + fees);
-        erc20Reserve -= withdrawAmount;
-
         _deactiveNFTFragments(withdrawAmount);
 
         // remove lp
@@ -424,6 +423,10 @@ contract MelandSwapExchangePool20T1155 is
             withdrawAmount * totalSupplie(),
             erc20Reserve
         );
+        erc20Reserve -= withdrawAmount;
+        if (liquidityToRemoved > balanceOf(account)) {
+            liquidityToRemoved = balanceOf(account);
+        }
         _burn(account, liquidityToRemoved);
 
         emit LiquidityRemoved(
@@ -459,9 +462,13 @@ contract MelandSwapExchangePool20T1155 is
         );
         uint256 withdrawFragments = _toNFTFragments(withdrawAmount);
         withdrawFragments += fragmentRemnants;
-        erc1155FragmentReserves -= withdrawFragments;
         uint256 liquidityToRemoved = (withdrawFragments * erc1155LPTotal) /
             erc1155FragmentReserves;
+        erc1155FragmentReserves -= withdrawFragments;
+
+        if (autoSwap) {
+            liquidityToRemoved = erc1155LPByProvider[account];
+        }
 
         _burnERC1155LP(account, liquidityToRemoved);
 
@@ -478,9 +485,9 @@ contract MelandSwapExchangePool20T1155 is
         );
     }
 
-    function sell(uint256 sellAmount, uint256 tknRate) external {
+    function sell(uint256 sellFragmentAmount, uint256 tknRate) external {
         address seller = _msgSender();
-        _sell(seller, _toNFTFragments(sellAmount), tknRate);
+        _sell(seller, sellFragmentAmount, tknRate);
     }
 
     function buy(
@@ -527,7 +534,7 @@ contract MelandSwapExchangePool20T1155 is
         );
 
         erc20token.transfer(seller, toUserPrice);
-        erc20Reserve -= (toUserPrice + erc20NetworkFees);
+        erc20Reserve = erc20Reserve - (toUserPrice + erc20NetworkFees);
 
         // Automatic compounding
         erc1155FragmentReserves =

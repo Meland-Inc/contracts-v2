@@ -28,6 +28,6 @@ module.exports = async function (deployer, network, accounts) {
     const result = await MigrationsI.deploy(contractName, erc1155Bytecode, initdata);
     MelandProxyAddress = await MigrationsI.getProxy(contractName);
     const melandchain1155i = await MelandChainERC1155.at(MelandProxyAddress);
-    await melandchain1155i.addHolder(MelandMarketplaceProxyAddress)
+    await melandchain1155i.addHolder(MelandMarketplaceProxyAddress);
     console.debug(contractName + " deployed", MelandProxyAddress);
 }

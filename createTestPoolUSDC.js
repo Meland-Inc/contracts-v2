@@ -9,7 +9,6 @@ const Web3 = require("web3");
 const { asciiToHex, encodePacked, hexToBytes } = require("web3-utils");
 
 module.exports = async function (callback) {
-    const web3 = new Web3();
     try {
         let network = config.network;
         if (![
@@ -31,13 +30,17 @@ module.exports = async function (callback) {
         //     "0x0dc0c2c1945a4a590159b11c9c69ac6d1781baa82ac442cffd0b89e8e33de380",
         //     "0x58f82b2D609D7b489bCC3A42359857596385c6ef"
         // );
-        const m = await ERC20.at("0xe6b8a5CF854791412c1f6EFC7CAf629f5Df1c747");
+        let accounts = await web3.eth.getAccounts()
+        const tokenAddress = "0xe6b8a5CF854791412c1f6EFC7CAf629f5Df1c747";
+        const m = await ERC20.at(tokenAddress);
         const MigrationsI = await Migrations.deployed();
         const MelandSwapFactoryAddress = await MigrationsI.getProxy("MelandSwapFactory");
         const MelandMarketplaceProxyAddress = await MigrationsI.getProxy("Marketplace");
         const MelandChainERC1155CIDAddress = await MigrationsI.getProxy("MelandChainERC1155CID");
         const MelandSwapFactoryI = await MelandSwapFactory.at(MelandSwapFactoryAddress);
 
+        const productManager = await MelandSwapFactoryI.productManager();
+        console.debug(productManager, MelandChainERC1155CIDAddress, "MelandChainERC1155CIDAddress");
         // IERC1155 erc1155,
         // uint256 tokenId,
         // IERC20Metadata erc20,
@@ -50,18 +53,30 @@ module.exports = async function (callback) {
         //     "1",
         //     "1"
         // );
-        await m.approve("0xecE00E78b821cA1d45AfCd4624D5A76Aca7B926c", "10000000000000000000000000");
+        console.debug("start approve");
+        let allowance = await m.allowance(accounts[0], MelandSwapFactoryAddress);
+        await m.approve(MelandSwapFactoryAddress, "1100000000000000000000");
+        allowance = await m.allowance(accounts[0], MelandSwapFactoryAddress);
         // await c.init(
         //     "10000000000000000000000000",
         //     "10000000"
         // );
+        // 71010001
+        console.debug(allowance.toString(), "allowance");
+        console.debug("end approve");
         await MelandSwapFactoryI.createPoolByCommunity(
             MelandChainERC1155CIDAddress,
             "71010001",
-            "0xe6b8a5CF854791412c1f6EFC7CAf629f5Df1c747",
+            tokenAddress,
             "100000000",
-            "100000000"
+            "100"
         );
+        // const poolAddress = await MelandSwapFactoryI.getPool(
+        //     MelandChainERC1155CIDAddress,
+        //     "61000020",
+        //     tokenAddress,
+        // );
+        // console.debug("create pool done.", poolAddress);
 
         callback();
     } catch (error) {

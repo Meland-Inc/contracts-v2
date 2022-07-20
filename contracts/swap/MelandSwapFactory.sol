@@ -87,7 +87,7 @@ contract MelandSwapFactory is
             return 0;
         }
         MelandSwapExchangePool20T1155 pool = MelandSwapExchangePool20T1155(pooladdress);
-        return pool.erc1155FragmentReservesActivated() / pool.nftfragments();
+        return pool.erc1155FragmentReservesActivated() / (pool.nftfragments() * 1025 / 1000);
     }
 
     function getBuyPrice(bytes32 productId, IERC20Metadata erc20token, uint256 buyamount) external view returns(uint256) {

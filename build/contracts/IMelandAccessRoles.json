@@ -15,22 +15,22 @@
     "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
     "exportedSymbols": {
       "IMelandAccessRoles": [
-        5305
+        6169
       ]
     },
-    "id": 5306,
+    "id": 6170,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5297,
+        "id": 6161,
         "literals": [
           "solidity",
           "0.8",
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:22:44"
+        "src": "32:22:48"
       },
       {
         "abstract": false,
@@ -39,27 +39,27 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 5305,
+        "id": 6169,
         "linearizedBaseContracts": [
-          5305
+          6169
         ],
         "name": "IMelandAccessRoles",
-        "nameLocation": "66:18:44",
+        "nameLocation": "66:18:48",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IMelandAccessRoles.MPCPermit",
-            "id": 5304,
+            "id": 6168,
             "members": [
               {
                 "constant": false,
-                "id": 5299,
+                "id": 6163,
                 "mutability": "mutable",
                 "name": "v",
-                "nameLocation": "124:1:44",
+                "nameLocation": "124:1:48",
                 "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "118:7:44",
+                "scope": 6168,
+                "src": "118:7:48",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -67,10 +67,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 5298,
+                  "id": 6162,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "118:5:44",
+                  "src": "118:5:48",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -80,13 +80,13 @@
               },
               {
                 "constant": false,
-                "id": 5301,
+                "id": 6165,
                 "mutability": "mutable",
                 "name": "r",
-                "nameLocation": "143:1:44",
+                "nameLocation": "143:1:48",
                 "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "135:9:44",
+                "scope": 6168,
+                "src": "135:9:48",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -94,10 +94,10 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 5300,
+                  "id": 6164,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "135:7:44",
+                  "src": "135:7:48",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes32",
                     "typeString": "bytes32"
@@ -107,13 +107,13 @@
               },
               {
                 "constant": false,
-                "id": 5303,
+                "id": 6167,
                 "mutability": "mutable",
                 "name": "s",
-                "nameLocation": "162:1:44",
+                "nameLocation": "162:1:48",
                 "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "154:9:44",
+                "scope": 6168,
+                "src": "154:9:48",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -121,10 +121,10 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 5302,
+                  "id": 6166,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "154:7:44",
+                  "src": "154:7:48",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes32",
                     "typeString": "bytes32"
@@ -134,164 +134,27 @@
               }
             ],
             "name": "MPCPermit",
-            "nameLocation": "98:9:44",
+            "nameLocation": "98:9:48",
             "nodeType": "StructDefinition",
-            "scope": 5305,
-            "src": "91:79:44",
+            "scope": 6169,
+            "src": "91:79:48",
             "visibility": "public"
           }
         ],
-        "scope": 5306,
-        "src": "56:116:44",
+        "scope": 6170,
+        "src": "56:116:48",
         "usedErrors": []
       }
     ],
-    "src": "32:141:44"
-  },
-  "legacyAST": {
-    "absolutePath": "project:/contracts/common/IMelandAccessRoles.sol",
-    "exportedSymbols": {
-      "IMelandAccessRoles": [
-        5305
-      ]
-    },
-    "id": 5306,
-    "license": "MIT",
-    "nodeType": "SourceUnit",
-    "nodes": [
-      {
-        "id": 5297,
-        "literals": [
-          "solidity",
-          "0.8",
-          ".9"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "32:22:44"
-      },
-      {
-        "abstract": false,
-        "baseContracts": [],
-        "canonicalName": "IMelandAccessRoles",
-        "contractDependencies": [],
-        "contractKind": "interface",
-        "fullyImplemented": true,
-        "id": 5305,
-        "linearizedBaseContracts": [
-          5305
-        ],
-        "name": "IMelandAccessRoles",
-        "nameLocation": "66:18:44",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "canonicalName": "IMelandAccessRoles.MPCPermit",
-            "id": 5304,
-            "members": [
-              {
-                "constant": false,
-                "id": 5299,
-                "mutability": "mutable",
-                "name": "v",
-                "nameLocation": "124:1:44",
-                "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "118:7:44",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint8",
-                  "typeString": "uint8"
-                },
-                "typeName": {
-                  "id": 5298,
-                  "name": "uint8",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "118:5:44",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint8",
-                    "typeString": "uint8"
-                  }
-                },
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 5301,
-                "mutability": "mutable",
-                "name": "r",
-                "nameLocation": "143:1:44",
-                "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "135:9:44",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
-                },
-                "typeName": {
-                  "id": 5300,
-                  "name": "bytes32",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "135:7:44",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  }
-                },
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 5303,
-                "mutability": "mutable",
-                "name": "s",
-                "nameLocation": "162:1:44",
-                "nodeType": "VariableDeclaration",
-                "scope": 5304,
-                "src": "154:9:44",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
-                },
-                "typeName": {
-                  "id": 5302,
-                  "name": "bytes32",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "154:7:44",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  }
-                },
-                "visibility": "internal"
-              }
-            ],
-            "name": "MPCPermit",
-            "nameLocation": "98:9:44",
-            "nodeType": "StructDefinition",
-            "scope": 5305,
-            "src": "91:79:44",
-            "visibility": "public"
-          }
-        ],
-        "scope": 5306,
-        "src": "56:116:44",
-        "usedErrors": []
-      }
-    ],
-    "src": "32:141:44"
+    "src": "32:141:48"
   },
   "compiler": {
     "name": "solc",
     "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.5",
-  "updatedAt": "2022-07-01T06:31:00.089Z",
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-13T06:01:47.595Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
